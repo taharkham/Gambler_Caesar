@@ -26,9 +26,9 @@ args = parser.parse_args()
 
 if args.mode.lower() == 'e' or args.mode.lower() == 'encrypt':
     if args.key:
-        caesar_encrypt(args.text,args.key)
+        caesar_encrypt(args.text.lower(),args.key)
 if args.mode.lower() == 'd' or args.mode.lower() == 'decrypt':
     if args.key:
-        caesar_decrypt(args.text,args.key)
+        caesar_decrypt(args.text.lower(),args.key)
     else:
-        caesar_decrypt(args.text,0)
+        caesar_decrypt(args.text.lower(),0)
